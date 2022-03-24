@@ -8,7 +8,9 @@
   @apply h-48 object-cover w-full rounded shadow-md mb-10;
 }
 .footer-icon {
-  @apply rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1;
+  @apply rounded-full border-2 border-white
+   text-white leading-normal uppercase 
+   hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1;
 }
 .nav-menu {
   @apply px-4 cursor-pointer md:hidden;
@@ -20,11 +22,11 @@ nav.dropdown {
   @apply pr-8 md:block hidden;
 }
 .drop-down {
-  @apply grid grid-rows-4 text-center items-center bg-yellow-100;
+  @apply grid grid-rows-4 text-center items-center rounded w-64 bg-yellow-100 absolute top-16 right-0 sm:hidden transition-all;
 }
 .drop-down-hidden {
-  @apply hidden;
+  @apply absolute -right-full;
 }
-/* .footer-section {
-  @apply text-center lg:text-left bg-gray-100 text-gray-600;
-}  */
+.nav-link {
+  @apply p-4 hover:bg-slate-300;
+}

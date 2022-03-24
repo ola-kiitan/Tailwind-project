@@ -1,10 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import Dropdown from './Dropdown'
+
 export default function Hero() {
   return (
-    <div className='bg-grey h-screen flex flex-col justify-center items-center'>
-      <Dropdown />
+    <div className='bg-grey h-screen flex flex-col justify-center items-center bg-orange-50 '>
       <h1 className='lg:text-9xl md:text-7xl sm:text-5xl text-3xl font-black mb-14'>
         YEMKAS
       </h1>
