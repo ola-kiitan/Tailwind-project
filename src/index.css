@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.menu-card {
+  @apply bg-gray-200 flex justify-center flex-col font-mono mb-4 md:w-auto md:h-auto;
+}
+.img {
+  @apply h-48 object-cover w-full rounded shadow-md mb-10;
+}
+.footer-icon {
+  @apply rounded-full border-2 border-white text-white leading-normal uppercase hover:bg-black hover:bg-opacity-5 focus:outline-none focus:ring-0 transition duration-150 ease-in-out w-9 h-9 m-1;
+}
+.nav-menu {
+  @apply px-4 cursor-pointer md:hidden;
+}
+nav.dropdown {
+  @apply flex flex-col bg-red-300;
+}
+.nav {
+  @apply pr-8 md:block hidden;
+}
+.drop-down {
+  @apply grid grid-rows-4 text-center items-center bg-yellow-100;
+}
+.drop-down-hidden {
+  @apply hidden;
+}
+/* .footer-section {
+  @apply text-center lg:text-left bg-gray-100 text-gray-600;
+}  */

@@ -1,49 +1,33 @@
-const people = [
-  {
-    name: 'Calvin Hawkins',
-    email: 'calvin.hawkins@example.com',
-    image:
-      'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    name: 'Kristen Ramos',
-    email: 'kristen.ramos@example.com',
-    image:
-      'https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-  {
-    name: 'Ted Fox',
-    email: 'ted.fox@example.com',
-    image:
-      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
-]
-
-export default function Example() {
+import React from 'react'
+import { Link } from 'react-router-dom'
+import Dropdown from './Dropdown'
+export default function Hero() {
   return (
-    <div className='container flex flex-col'>
-      <ul className='divide-y divide-gray-200'>
-        {people.map((person) => (
-          <li key={person.email} className='py-4 flex'>
-            <img className='h-10 w-10 rounded-full' src={person.image} alt='' />
-            <div className='ml-3'>
-              <p className='text-sm font-medium text-gray-900'>{person.name}</p>
-              <p className='text-sm text-gray-500'>{person.email}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
-      <Button>click me</Button>
+    <div className='bg-grey h-screen flex flex-col justify-center items-center'>
+      <Dropdown />
+      <h1 className='lg:text-9xl md:text-7xl sm:text-5xl text-3xl font-black mb-14'>
+        YEMKAS
+      </h1>
+      <Link
+        to='/'
+        className=' py-6 px-10 text-3xl bg-yellow-400 flex items-center rounded-full hover:bg-yellow-200 transition duration-300 ease-in-out animate-bounce  '
+      >
+        Order now
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          className='h-6 w-6 ml-4'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke='currentColor'
+          strokeWidth={2}
+        >
+          <path
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z'
+          />
+        </svg>
+      </Link>
     </div>
-  )
-}
-function Button(props) {
-  return (
-    <a
-      href={props.href}
-      className='bg-pink-500 text-black font-medium p-2 rounded text-center align-middle justify-center cursor-pointer  hover:bg-pink-300'
-    >
-      {props.children}
-    </a>
   )
 }
