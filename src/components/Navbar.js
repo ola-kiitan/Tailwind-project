@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, animateScroll as scroll } from 'react-scroll'
+
 import Dropdown from './Dropdown'
 export default function Navbar() {
   const [click, setClick] = useState(false)
+
   const handleClick = () => {
     setClick(!click)
     console.log('clicked')
@@ -14,7 +16,15 @@ export default function Navbar() {
   return (
     <>
       <nav className='flex justify-between items-center h-16 bg-gray-900 text-white relative shadow-sm font-mono role="navigation'>
-        <Link to='/' className='italic text-3xl '>
+        <Link
+          to='home'
+          activeClass='active'
+          spy={true}
+          smooth={true}
+          offset={10}
+          duration={500}
+          className='italic text-3xl cursor-pointer '
+        >
           YEMKAS
         </Link>
         <div className={'nav-menu'}>
@@ -35,16 +45,48 @@ export default function Navbar() {
           </svg>
         </div>
         <div className=' nav'>
-          <Link className='p-4' to='/'>
+          <Link
+            className='p-4 cursor-pointer'
+            to='home'
+            activeClass='active'
+            spy={true}
+            smooth={true}
+            offset={10}
+            duration={500}
+          >
             Home
           </Link>
-          <Link className='p-4' to='/service'>
+          <Link
+            className='p-4 cursor-pointer'
+            to='service'
+            activeClass='active'
+            spy={true}
+            smooth={true}
+            offset={10}
+            duration={500}
+          >
             Service
           </Link>
-          <Link className='p-4' to='/project'>
+          <Link
+            className='p-4 cursor-pointer'
+            to='project'
+            activeClass='active'
+            spy={true}
+            smooth={true}
+            offset={10}
+            duration={500}
+          >
             Project
           </Link>
-          <Link className='p-4' to='/contact'>
+          <Link
+            className='p-4 cursor-pointer'
+            to='contact'
+            activeClass='active'
+            spy={true}
+            smooth={true}
+            offset={10}
+            duration={500}
+          >
             Contact
           </Link>
         </div>

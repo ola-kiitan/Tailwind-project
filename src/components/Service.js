@@ -5,7 +5,10 @@ import ImageThree from '../images/house-blend.jpeg'
 
 export default function Service() {
   return (
-    <div className='h-full py-6 flex flex-col md:flex-row lg:flex-row items-center justify-evenly bg-gray-300'>
+    <div
+      id='service'
+      className='h-full py-6 flex flex-col md:flex-row lg:flex-row items-center justify-evenly bg-gray-300'
+    >
       <div className='menu-card '>
         <img src={ImageOne} alt='columbia-roast' className='img' />
         <div className='py-4 text-center'>

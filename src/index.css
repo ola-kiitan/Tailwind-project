@@ -22,7 +22,7 @@ nav.dropdown {
   @apply pr-8 md:block hidden;
 }
 .drop-down {
-  @apply grid grid-rows-4 text-center items-center rounded w-64 bg-yellow-100 absolute top-16 right-0 sm:hidden transition-all;
+  @apply grid grid-rows-4 text-center items-center rounded w-64 bg-yellow-100 absolute top-16 right-0 md:hidden transition-all;
 }
 .drop-down-hidden {
   @apply absolute -right-full;
