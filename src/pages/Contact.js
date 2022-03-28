@@ -3,7 +3,7 @@ import React from 'react'
 export default function Contact() {
   return (
     <div
-      className=' contact items-center h-full p-2 mt-2 shadow-md'
+      className=' bg-amber-100 contact items-center h-full p-2 mt-2 shadow-md'
       id='contact'
     >
       <div className='contact items-center bg-gray-100 shadow'>
