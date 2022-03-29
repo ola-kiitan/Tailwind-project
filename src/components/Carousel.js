@@ -62,22 +62,33 @@ class Carousel extends Component {
           <Swipe onSwipeLeft={this.nextSlide} onSwipeRight={this.prevSlide}>
             {CarouselData.map((slide, index) => {
               return (
-                <img
-                  src={slide.image}
-                  alt='This is a carousel slide'
-                  key={index}
-                  className={
-                    index === this.state.currentSlide
-                      ? 'block w-76 flex-1 h-auto object-cover'
-                      : 'hidden'
-                  }
-                  onMouseEnter={() => {
-                    this.setState({ paused: true })
-                  }}
-                  onMouseLeave={() => {
-                    this.setState({ paused: false })
-                  }}
-                />
+                <div className='relative '>
+                  <img
+                    src={slide.image}
+                    alt='This is a carousel slide'
+                    key={index}
+                    className={
+                      index === this.state.currentSlide
+                        ? 'block w-76 flex-1 h-auto object-cover'
+                        : 'hidden'
+                    }
+                    onMouseEnter={() => {
+                      this.setState({ paused: true })
+                    }}
+                    onMouseLeave={() => {
+                      this.setState({ paused: false })
+                    }}
+                  />
+                  <h3
+                    className={
+                      index === this.state.currentSlide
+                        ? 'text-5xl italic text-orange-300 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 '
+                        : 'hidden'
+                    }
+                  >
+                    {slide.title}
+                  </h3>
+                </div>
               )
             })}
           </Swipe>
